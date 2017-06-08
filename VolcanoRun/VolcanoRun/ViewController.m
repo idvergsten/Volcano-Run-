@@ -4,8 +4,8 @@
 //
 
 #import "ViewController.h"
-//#import "AGLKVertexAttribArrayBuffer.h"
-//#import "AGLKContext.h"
+#import "AGLKVertexAttribArrayBuffer.h"
+#import "AGLKContext.h"
 
 @implementation VolcanoRunViewController
 //@synthesize baseEffect;
@@ -49,8 +49,8 @@
     
     // Create an OpenGL ES 2.0 context and provide it to the
     // view
-    //view.context = [[AGLKContext alloc]
-                    //initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    view.context = [[AGLKContext alloc]
+                    initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
     // Make the new context current
     //[AGLKContext setCurrentContext:view.context];

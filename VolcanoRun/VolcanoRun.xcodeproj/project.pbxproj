@@ -14,6 +14,8 @@
 		916DC8231EEA15D1004FD438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916DC8221EEA15D1004FD438 /* Assets.xcassets */; };
 		916DC8261EEA15D1004FD438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 916DC8241EEA15D1004FD438 /* LaunchScreen.storyboard */; };
 		916DC82F1EEA16E3004FD438 /* Grid.gif in Resources */ = {isa = PBXBuildFile; fileRef = 916DC82E1EEA16E3004FD438 /* Grid.gif */; };
+		916DC8321EEA1AB5004FD438 /* AGLKContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DC8311EEA1AB5004FD438 /* AGLKContext.m */; };
+		916DC8351EEA1B6F004FD438 /* AGLKVertexAttribArrayBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DC8341EEA1B6F004FD438 /* AGLKVertexAttribArrayBuffer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		916DC8271EEA15D1004FD438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916DC82D1EEA16A7004FD438 /* Definitions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definitions.h; sourceTree = "<group>"; };
 		916DC82E1EEA16E3004FD438 /* Grid.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Grid.gif; sourceTree = "<group>"; };
+		916DC8301EEA1AA4004FD438 /* AGLKContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKContext.h; sourceTree = "<group>"; };
+		916DC8311EEA1AB5004FD438 /* AGLKContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKContext.m; sourceTree = "<group>"; };
+		916DC8331EEA1B4C004FD438 /* AGLKVertexAttribArrayBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGLKVertexAttribArrayBuffer.h; sourceTree = "<group>"; };
+		916DC8341EEA1B6F004FD438 /* AGLKVertexAttribArrayBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLKVertexAttribArrayBuffer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				916DC8271EEA15D1004FD438 /* Info.plist */,
 				916DC8161EEA15D1004FD438 /* Supporting Files */,
 				916DC82D1EEA16A7004FD438 /* Definitions.h */,
+				916DC8301EEA1AA4004FD438 /* AGLKContext.h */,
+				916DC8311EEA1AB5004FD438 /* AGLKContext.m */,
+				916DC8331EEA1B4C004FD438 /* AGLKVertexAttribArrayBuffer.h */,
+				916DC8341EEA1B6F004FD438 /* AGLKVertexAttribArrayBuffer.m */,
 			);
 			path = VolcanoRun;
 			sourceTree = "<group>";
@@ -157,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916DC8321EEA1AB5004FD438 /* AGLKContext.m in Sources */,
 				916DC81E1EEA15D1004FD438 /* ViewController.m in Sources */,
+				916DC8351EEA1B6F004FD438 /* AGLKVertexAttribArrayBuffer.m in Sources */,
 				916DC81B1EEA15D1004FD438 /* AppDelegate.m in Sources */,
 				916DC8181EEA15D1004FD438 /* main.m in Sources */,
 			);
