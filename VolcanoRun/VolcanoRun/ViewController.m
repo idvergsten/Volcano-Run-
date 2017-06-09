@@ -1,3 +1,4 @@
+
 //
 //  OpenGLES_Ch3_1ViewController.m
 //  OpenGLES_Ch3_1
@@ -53,7 +54,7 @@
                     initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
     // Make the new context current
-    //[AGLKContext setCurrentContext:view.context];
+    [AGLKContext setCurrentContext:view.context];
     
     // Create a base effect that provides standard OpenGL ES 2.0
     // shading language programs and set constants to be used for
@@ -67,17 +68,17 @@
                                                    1.0f);// Alpha
     
     // Set the background color stored in the current context
-    //((AGLKContext *)view.context).clearColor = GLKVector4Make(
-                                                             // 0.0f, // Red
-                                                            //  0.0f, // Green
-                                                             // 0.0f, // Blue
-                                                             // 1.0f);// Alpha
+    ((AGLKContext *)view.context).clearColor = GLKVector4Make(
+                                                              0.0f, // Red
+                                                             0.0f, // Green
+                                                              0.0f, // Blue
+                                                              1.0f);// Alpha
     
     
-    //_msPacman = [[MsPacman alloc]initWithBaseEffect:self.baseEffect];
+    _volcanoMan = [[VolcanoMan alloc]initWithBaseEffect:self.baseEffect];
     // Setup texture
     CGImageRef imageRef =
-    [[UIImage imageNamed:@"mspacmanspritecloseup.gif"]CGImage];//leaves.gif"] CGImage];
+    [[UIImage imageNamed:@"Grid.gif"]CGImage];//leaves.gif"] CGImage];
     
     GLKTextureInfo *textureInfo = [GLKTextureLoader
                                    textureWithCGImage:imageRef
@@ -98,22 +99,22 @@
     
     if(sender.direction == UISwipeGestureRecognizerDirectionUp)
     {
-        //[_msPacman changeState:(UP)];
+        [_volcanoMan changeState:(UP)];
         NSLog(@"swiped down");
     }
     if(sender.direction == UISwipeGestureRecognizerDirectionDown)
     {
-        //[_msPacman changeState:(DOWN)];
+        [_volcanoMan changeState:(DOWN)];
         NSLog(@"swiped down");
     }
     if(sender.direction == UISwipeGestureRecognizerDirectionLeft)
     {
-        //[_msPacman changeState:(LEFT)];
+        [_volcanoMan changeState:(LEFT)];
         NSLog(@"swiped down");
     }
     if(sender.direction == UISwipeGestureRecognizerDirectionRight)
     {
-        //[_msPacman changeState:(RIGHT)];
+        [_volcanoMan changeState:(RIGHT)];
         NSLog(@"swiped down");
     }
 }
@@ -121,7 +122,7 @@
 -(void)onTick
 {
     //set move in y direction for pacman
-    //[_msPacman onTick];
+    [_volcanoMan onTick];
 }
 
 -(void)update{
@@ -132,7 +133,7 @@
     self.baseEffect.transform.projectionMatrix = projectionMatrix;
     
     //setup the translation matrix for pacman
-    //[_msPacman update];
+    [_volcanoMan update];
     // Compute the model view matrix for the object rendered with GLKit
     
     
@@ -147,10 +148,10 @@
     [self.baseEffect prepareToDraw];
     
     // Clear back frame buffer (erase previous drawing)
-    //[(AGLKContext *)view.context clear:GL_COLOR_BUFFER_BIT];
+    [(AGLKContext *)view.context clear:GL_COLOR_BUFFER_BIT];
     
     //draw pacman
-   // [_msPacman render];
+    [_volcanoMan render];
     
 }
 //- (void)slideToLeftWithGestureRecognizer:(id)sender {
@@ -167,7 +168,7 @@
     [self.timer invalidate];
     // Make the view's context current
     GLKView *view = (GLKView *)self.view;
-    //[AGLKContext setCurrentContext:view.context];
+    [AGLKContext setCurrentContext:view.context];
     
     // Delete buffers that aren't needed when view is unloaded
     

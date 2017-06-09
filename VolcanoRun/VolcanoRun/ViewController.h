@@ -4,7 +4,7 @@
 //
 
 #import <GLKit/GLKit.h>
-//#import "MsPacman.h"
+#import "VolcanoMan.h"
 //@class AGLKVertexAttribArrayBuffer;
 
 
@@ -12,7 +12,7 @@
 {
     GLKMatrix4 _modelViewMatrix;
     double timerInterval ;
-    //MsPacman* _msPacman;
+    VolcanoMan* _volcanoMan;
 }
 @property (nonatomic, strong)UISwipeGestureRecognizer* leftSwipt;
 @property (nonatomic, strong)UISwipeGestureRecognizer* rightSwipt;

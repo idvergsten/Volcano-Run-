@@ -2,8 +2,8 @@
 //  main.m
 //  VolcanoRun
 //
-//  Created by David Dvergsten on 6/8/17.
-//  Copyright © 2017 David Dvergsten. All rights reserved.
+//  Created by Dvergsten Apps, LLC. on 6/8/17.
+//  Copyright © 2017 Dvergsten Apps, LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
