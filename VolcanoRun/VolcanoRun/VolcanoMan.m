@@ -5,6 +5,7 @@
 //  Created by David Dvergsten on 10/31/16.
 //
 //
+#define SPEED 0.02
 #import "VolcanoMan.h"
 #import <Foundation/Foundation.h>
 #import "Definitions.h"
@@ -36,26 +37,26 @@
 //};
 static const SceneVertex verticesMouthUp[] =
 {
-    {{-0.1f, -0.1f, 0.0f}, {0.0f, 0.250f}}, // lower left corner
-    {{ 0.1f, -0.1f, 0.0f}, {0.125f, 0.250f}}, // lower right corner
-    {{-0.1f,  0.1f, 0.0f}, {0.0f, 0.125f}}, // upper left corner
-    {{0.1f,  0.1f, 0.0f}, {0.125f, 0.125f}},
+    {{-0.1f, -0.1f, 0.0f}, {0.0f, 0.375f}}, // lower left corner
+    {{ 0.1f, -0.1f, 0.0f}, {0.125f, 0.375f}}, // lower right corner
+    {{-0.1f,  0.1f, 0.0f}, {0.0f, 0.250f}}, // upper left corner
+    {{0.1f,  0.1f, 0.0f}, {0.125f, 0.250f}},
 };
 
 static const SceneVertex verticesMouthWideUp[] =
 {
-    {{-0.1f, -0.1f, 0.0f}, {0.125f, 0.250f}}, // lower left corner
-    {{ 0.1f, -0.1f, 0.0f}, {0.250f, 0.250f}}, // lower right corner
-    {{-0.1f,  0.1f, 0.0f}, {0.125f, 0.125f}}, // upper left corner
-    {{0.1f,  0.1f, 0.0f}, {0.250f, 0.125f}},
+    {{-0.1f, -0.1f, 0.0f}, {0.125f, 0.375f}}, // lower left corner
+    {{ 0.1f, -0.1f, 0.0f}, {0.250f, 0.375f}}, // lower right corner
+    {{-0.1f,  0.1f, 0.0f}, {0.125f, 0.250f}}, // upper left corner
+    {{0.1f,  0.1f, 0.0f}, {0.250f, 0.250f}},
 };
 
 static const SceneVertex verticesMouthShutUp[] =
 {
-    {{-0.1f, -0.1f, 0.0f}, {0.250f, 0.250f}}, // lower left corner
-    {{ 0.1f, -0.1f, 0.0f}, {0.375f, 0.250f}}, // lower right corner
-    {{-0.1f,  0.1f, 0.0f}, {0.250f, 0.125f}}, // upper left corner
-    {{0.1f,  0.1f, 0.0f}, {0.375f, 0.125f}},
+    {{-0.1f, -0.1f, 0.0f}, {0.250f, 0.375f}}, // lower left corner
+    {{ 0.1f, -0.1f, 0.0f}, {0.375f, 0.375f}}, // lower right corner
+    {{-0.1f,  0.1f, 0.0f}, {0.250f, 0.250f}}, // upper left corner
+    {{0.1f,  0.1f, 0.0f}, {0.375f, 0.250f}},
 };
 
 //draw pman down animation/////////////
@@ -239,13 +240,13 @@ static const SceneVertex verticesMouthShutRight[] =
 {
     //TODO: UPDATE THE MODELVIEWMATRIX
     if(_state == UP)
-        _moveY += 0.05;
+        _moveY += SPEED;
     else if(_state == DOWN)
-        _moveY -= 0.05;
+        _moveY -= SPEED;
     else if(_state == LEFT)
-        _moveX -= 0.05;
+        _moveX -= SPEED;
     else if(_state == RIGHT)
-        _moveX += 0.05;
+        _moveX += SPEED;
     
     _frameCounter++;
     if(_frameCounter == 3)
