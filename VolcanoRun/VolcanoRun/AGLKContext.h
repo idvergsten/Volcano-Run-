@@ -17,6 +17,6 @@ GLKVector4 clearColor;
 - (void)enable:(GLenum)capability;
 - (void)disable:(GLenum)capability;
 - (void)setBlendSourceFunction:(GLenum)sfactor
-           destinationFunction:(GLenum)dfactor;
+           destinationFunction:(GLenum)dfactor;//test push
 
 @end
