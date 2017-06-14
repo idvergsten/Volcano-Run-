@@ -1,4 +1,4 @@
-//
+﻿//
 //  AppDelegate.h
 //  VolcanoRun
 //
@@ -11,7 +11,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+// 
 
 @end
 
